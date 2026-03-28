@@ -1,87 +1,72 @@
-# blognextjs
-Bài tập Blog Next.JS
+# Phi Long's Personal Blog & Portfolio
 
-![Next.js](https://img.shields.io/badge/Next.js-14-black) ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-blue)
+Dự án Blog cá nhân và Portfolio của **Nguyễn Xuân Phi Long** - Full-stack Developer (định hướng BrSE). Được xây dựng trên nền tảng **Next.js 14 (App Router)** với thiết kế thân thiện, tối giản và tối ưu hóa hiệu suất (SEO, SSG/SSR).
 
-## Project Structure
+## 🚀 Công Nghệ (Tech Stack)
+
+- **Core:** Next.js 14, React 18, TypeScript.
+- **UI/Styling:** Tailwind CSS, Lucide React.
+- **Form & Validation:** React Hook Form, Zod.
+- **Tiện ích:** date-fns.
+
+## 📁 Cấu Trúc Dự Án (Project Tree)
 
 ```text
 blognextjs/
-├── app/
-│   ├── (marketing)/
-│   │   ├── layout.tsx
-│   │   ├── page.tsx             # Homepage
+├── app/                              # Next.js App Router (Routing logic)
+│   ├── (marketing)/                  # Group Layout: Trang tĩnh
 │   │   ├── about/
-│   │   │   └── page.tsx
-│   │   └── contact/
-│   │       └── page.tsx
-│   ├── blog/
-│   │   ├── page.tsx             # Blog listing
-│   │   ├── loading.tsx
-│   │   ├── error.tsx
-│   │   └── [slug]/
-│   │       ├── page.tsx         # Post detail
-│   │       ├── loading.tsx
-│   │       └── @comments/
-│   │           └── default.tsx  # Parallel route
-│   │   └── category/
-│   │       └── [category]/
-│   │           └── page.tsx
-│   ├── api/
+│   │   │   └── page.tsx              # Giới thiệu bản thân
 │   │   ├── contact/
-│   │   │   └── route.ts         # Contact form API
-│   │   └── posts/
-│   │       ├── route.ts         # Posts API
-│   │       └── [slug]/
-│   │           └── route.ts     # Post Detail API
-│   ├── layout.tsx               # Root layout
-│   ├── loading.tsx
-│   ├── error.tsx
-│   ├── not-found.tsx
-│   └── globals.css
-├── components/
-│   ├── layout/
-│   │   ├── Header.tsx
+│   │   │   └── page.tsx              # Form liên hệ
+│   │   └── page.tsx                  # Trang chủ (Portfolio & Latest Posts)
+│   ├── api/
+│   │   └── contact/
+│   │       └── route.ts              # API Route xử lý nhận form liên hệ
+│   ├── blog/                         # Sub-route Blog chính
+│   │   ├── [slug]/                   # Trang xem chi tiết bài viết (SSG, SEO)
+│   │   │   ├── @comments/            # Parallel Route (Demo)
+│   │   │   │   └── default.tsx
+│   │   │   ├── loading.tsx           # Skeleton cho riêng bài viết
+│   │   │   └── page.tsx              
+│   │   ├── category/                 # Bộ lọc Blog theo danh mục
+│   │   │   └── [category]/
+│   │   │       └── page.tsx          
+│   │   ├── error.tsx                 # Error Boundary cấp cục bộ (Blog)
+│   │   └── page.tsx                  # Danh sách toàn bộ bài viết
+│   ├── error.tsx                     # Error Boundary cấp Root (Global Error)
+│   ├── globals.css                   # File CSS định dạng Root Tailwind
+│   ├── layout.tsx                    # Root Layout chứa Header, Navigation, Footer
+│   ├── loading.tsx                   # Loading Skeleton cấp Root (Spinkit)
+│   └── not-found.tsx                 # Custom 404 Page Error Handling
+├── components/                       # Shared UI Components
+│   ├── blog/                         # Chứa Component riêng cho Logic Blog
+│   │   ├── PostCard.tsx
+│   │   └── PostList.tsx
+│   ├── forms/                        # Chứa các Component Form Input nghiệp vụ
+│   │   ├── CommentForm.tsx           # Xử lý nhập Bình luận thực tế (Optimistic Update)
+│   │   └── ContactForm.tsx
+│   ├── layout/                       # Thành phần dùng chung toàn cục thiết kế
 │   │   ├── Footer.tsx
+│   │   ├── Header.tsx
 │   │   └── Navigation.tsx
-│   ├── blog/
-│   │   ├── PostCard.tsx         # Client component
-│   │   ├── PostList.tsx         # Server component
-│   │   ├── PostContent.tsx
-│   │   ├── CategoryBadge.tsx
-│   │   └── SearchBar.tsx        # Client componentcó sử dụng useDebounce
-│   ├── forms/
-│   │   ├── ContactForm.tsx      # Client component
-│   │   └── CommentForm.tsx      # Client component
-│   └── ui/
+│   └── ui/                           # Thành phần nguyên tử UI tái sử dụng
 │       ├── Button.tsx
+│       ├── Card.tsx
 │       ├── Input.tsx
-│       ├── Textarea.tsx
-│       └── Card.tsx
-├── hooks/
-│   └── useDebounce.ts           # Custom Debounce hook (Mới thêm)
-├── lib/
-│   ├── api.ts                   # API functions
-│   ├── utils.ts                 # Utility functions
-│   ├── validations.ts           # Zod schemas
-│   └── constants.ts
+│       └── Textarea.tsx
+├── data/                             # Mock Database
+│   └── posts.json                    # Nguồn file giả lập dữ liệu tĩnh Database
+├── lib/                              # Helper & Core Logic
+│   ├── api.ts                        # Logic query JSON (getPosts, filters)
+│   ├── utils.ts                      # Hàm format/dựng utilities string, class tailwind 
+│   └── validations.ts                # Khởi tạo form schema Zod rules để validate dữ liệu
 ├── types/
-│   └── index.ts                 # TypeScript types
-├── data/
-│   └── posts.json               # Mock data
-├── public/
-│   ├── images/
-│   │   ├── placeholder.jpg
-│   │   └── posts/
-│   └── favicon.ico
-├── .env.local
-├── next.config.js
-├── tailwind.config.ts
-├── tsconfig.json
-└── package.json
+│   └── index.ts                      # Nơi định hình Typescript Interfaces (Post, Category)
+├── public/                           # Chứa hình ảnh tĩnh, phông chữ, v.v
+├── next.config.js                    # File cấu hình Nextjs (như định tuyến Image hostname)
+├── package.json                      # Quản lý dependencies
+├── postcss.config.mjs                # Thiết lập công cụ Postcss xử lý Tailwind V3
+├── tailwind.config.ts                # Định cấu hình class cho TailwindCSS
+└── tsconfig.json                     # Typescript configuration rules
 ```
-
-## Getting Started
-
-1. `npm install`
-2. `npm run dev`
