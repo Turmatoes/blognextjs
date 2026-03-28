@@ -12,7 +12,7 @@ export default async function HomePage() {
       {/* Phần Bio Giới thiệu bản thân */}
       <section className="mb-16 flex flex-col items-start">
         <Image
-          src="https://picsum.photos/seed/philong/200/200" 
+          src="https://scontent.fhan19-1.fna.fbcdn.net/v/t1.6435-9/146994739_261040135545019_2600529356075627518_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2a1932&_nc_ohc=As6uRjeEvP8Q7kNvwGMdOkF&_nc_oc=Adq7eUrTIpTlO5tq1SBFlIPSWrkcEBG4Ulve4Q46fwR-JUroy5rdmqeDYHbJr1cV1pg&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=4lOEaEITdwNIi9XbioFsUw&_nc_ss=7a30f&oh=00_Afwrprr5KaVjWFi-3AAbsi1ODgcvxPr617Gs58RRb2EelQ&oe=69EF65A5"
           alt="Phi Long"
           width={120}
           height={120}
@@ -22,10 +22,10 @@ export default async function HomePage() {
           Phi Long
         </h1>
         <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-5">
-          Luôn lạc quan, luôn khao khát (với ẩm thực và tri thức). Cảm thấy đặc biệt thoải mái với những tác phẩm văn học lớn cũng như với các tài liệu kỹ thuật phức tạp. Yêu công nghệ, đam mê xây dựng hệ thống phần mềm và tôi tự nhận mình là người may mắn nhất thế giới.
+          Chào mừng bạn đến với blog cá nhân của mình! Mình là Nguyễn Xuân Phi Long, một lập trình viên Full-stack trẻ đang sinh sống tại Hà Nội và vừa tốt nghiệp chuyên ngành Kỹ thuật Phần mềm tại Đại học FPT. Với nền tảng vững chắc về Java Spring Boot và ReactJS, mình đam mê xây dựng những hệ thống quản lý tối ưu và có khả năng mở rộng cao. Bên cạnh chuyên môn kỹ thuật, mình còn sở hữu chứng chỉ JLPT N2 và có kinh nghiệm thực tập tại Nhật Bản, giúp mình tự tin làm việc trong môi trường quốc tế.
         </p>
         <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-          Tôi sống mỗi ngày với nỗ lực cải thiện bản thân và tin tưởng mãnh liệt rằng mọi chuyện xảy ra đều là những điều tốt đẹp nhất có thể.
+          Blog này là nơi mình chia sẻ những kiến thức về phát triển phần mềm, tư duy hệ thống và hành trình trở thành một Kỹ sư Cầu nối (BrSE) trong tương lai. Hy vọng những trải nghiệm và dự án mình từng thực hiện sẽ mang lại giá trị hữu ích cho cộng đồng lập trình.
         </p>
       </section>
 
@@ -34,7 +34,7 @@ export default async function HomePage() {
         <h2 className="text-2xl font-bold text-gray-900 mb-8 pb-3 border-b flex items-center justify-between">
           Blog
         </h2>
-        
+
         <ul className="space-y-8">
           {posts.map((post) => (
             <li key={post.id} className="group flex flex-col items-start">
@@ -57,7 +57,7 @@ export default async function HomePage() {
 
         {posts.length > 0 && (
           <div className="mt-12 pt-6 border-t">
-            <Link 
+            <Link
               href="/blog"
               className="inline-flex items-center font-bold text-primary-600 hover:text-primary-700 hover:underline transition-all text-lg"
             >

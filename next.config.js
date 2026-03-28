@@ -11,6 +11,14 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'picsum.photos',
             },
+            {
+                protocol: 'https',
+                hostname: 'scontent.fhan19-1.fna.fbcdn.net',
+            },
+            {
+                protocol: 'https',
+                hostname: 'images.unsplash.com',
+            },
         ],
         // Hỗ trợ các định dạng ảnh nén cao giúp web tải nhanh hơn
         formats: ['image/avif', 'image/webp'],

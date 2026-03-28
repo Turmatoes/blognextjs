@@ -1,27 +1,131 @@
 [
     {
         "id": "1",
-        "title": "Giới thiệu về Next.js 14",
-        "slug": "gioi-thieu-nextjs-14",
-        "excerpt": "Tìm hiểu về các tính năng mới trong Next.js 14 và App Router",
-        "content": "# Nội dung bài viết...",
-        "coverImage": "/images/posts/nextjs-14.jpg",
+        "title": "Hành trình chinh phục JLPT N2 và mục tiêu Kỹ sư Cầu nối",
+        "slug": "hanh-trinh-chinh-phuc-jlpt-n2",
+        "excerpt": "Chia sẻ kinh nghiệm học tiếng Nhật cấp tốc và định hướng trở thành Bridge Software Engineer.",
+        "content": "# Hành trình từ N3 lên N2 trong 1 năm\n\nTiếng Nhật không chỉ là một ngôn ngữ, mà là chìa khóa để mở ra cơ hội làm việc tại Nhật Bản. Trong bài viết này, mình sẽ chia sẻ lộ trình đạt JLPT N2 vào tháng 12/2025 và cách kết hợp học ngôn ngữ với kiến thức CNTT.",
+        "coverImage": "https://images.unsplash.com/photo-1528164344705-47542687000d?w=800&q=80",
         "author": {
-            "id": "1",
-            "name": "Nguyễn Văn A",
-            "avatar": "/images/authors/author-1.jpg",
+            "id": "phi-long",
+            "name": "Nguyễn Xuân Phi Long",
+            "avatar": "https://scontent.fhan19-1.fna.fbcdn.net/v/t1.6435-9/146994739_261040135545019_2600529356075627518_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2a1932&_nc_ohc=As6uRjeEvP8Q7kNvwGMdOkF&_nc_oc=Adq7eUrTIpTlO5tq1SBFlIPSWrkcEBG4Ulve4Q46fwR-JUroy5rdmqeDYHbJr1cV1pg&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=4lOEaEITdwNIi9XbioFsUw&_nc_ss=7a30f&oh=00_Afwrprr5KaVjWFi-3AAbsi1ODgcvxPr617Gs58RRb2EelQ&oe=69EF65A5",
+            "bio": "Full-stack Developer & Japanese Speaker"
+        },
+        "category": {
+            "id": "career",
+            "name": "Career Path",
+            "slug": "career-path"
+        },
+        "publishedAt": "2026-01-10T08:00:00Z",
+        "tags": [
+            "Japanese",
+            "JLPT",
+            "BrSE"
+        ],
+        "readingTime": 6
+    },
+    {
+        "id": "2",
+        "title": "Xây dựng hệ thống quản lý giáo dục với Java Spring Boot",
+        "slug": "xay-dung-he-thong-mvems",
+        "excerpt": "Phân tích kiến trúc hệ thống MVEMS và cách quản lý luồng dữ liệu HRM/Academic.",
+        "content": "# Case Study: Minh Viet Education Management System\n\nLàm thế nào để thay đổi quy trình thủ công sang tự động hóa hoàn toàn? Bài viết đi sâu vào cách mình thiết kế ER Diagram và triển khai Backend bằng Java Spring Boot + SQL Server cho hệ thống MVEMS.",
+        "coverImage": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80",
+        "author": {
+            "id": "phi-long",
+            "name": "Nguyễn Xuân Phi Long",
+            "avatar": "https://scontent.fhan19-1.fna.fbcdn.net/v/t1.6435-9/146994739_261040135545019_2600529356075627518_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2a1932&_nc_ohc=As6uRjeEvP8Q7kNvwGMdOkF&_nc_oc=Adq7eUrTIpTlO5tq1SBFlIPSWrkcEBG4Ulve4Q46fwR-JUroy5rdmqeDYHbJr1cV1pg&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=4lOEaEITdwNIi9XbioFsUw&_nc_ss=7a30f&oh=00_Afwrprr5KaVjWFi-3AAbsi1ODgcvxPr617Gs58RRb2EelQ&oe=69EF65A5",
             "bio": "Full-stack Developer"
         },
         "category": {
-            "id": "1",
-            "name": "Tutorial",
-            "slug": "tutorial"
+            "id": "tech",
+            "name": "Development",
+            "slug": "development"
         },
-        "publishedAt": "2024-01-15T10:00:00Z",
+        "publishedAt": "2026-02-15T09:00:00Z",
         "tags": [
-            "nextjs",
-            "react",
-            "tutorial"
+            "Java",
+            "Spring Boot",
+            "SQL Server"
+        ],
+        "readingTime": 8
+    },
+    {
+        "id": "3",
+        "title": "Tối ưu hóa quy trình OJT với Japan Internship Portal (JIT)",
+        "slug": "toi-uu-quy-trinh-ojt-jit",
+        "excerpt": "Cách mình thiết kế cổng thông tin thực tập tập trung thay thế các quy trình giấy tờ.",
+        "content": "# Giải pháp số hóa cho kỳ thực tập\n\nDự án JIT được ra đời nhằm quản lý lịch trình, bài tập và phản hồi cho sinh viên thực tập. Mình đã sử dụng AWS S3 để lưu trữ file và tích hợp Google Docs để báo cáo real-time.",
+        "coverImage": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+        "author": {
+            "id": "phi-long",
+            "name": "Nguyễn Xuân Phi Long",
+            "avatar": "https://scontent.fhan19-1.fna.fbcdn.net/v/t1.6435-9/146994739_261040135545019_2600529356075627518_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2a1932&_nc_ohc=As6uRjeEvP8Q7kNvwGMdOkF&_nc_oc=Adq7eUrTIpTlO5tq1SBFlIPSWrkcEBG4Ulve4Q46fwR-JUroy5rdmqeDYHbJr1cV1pg&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=4lOEaEITdwNIi9XbioFsUw&_nc_ss=7a30f&oh=00_Afwrprr5KaVjWFi-3AAbsi1ODgcvxPr617Gs58RRb2EelQ&oe=69EF65A5",
+            "bio": "Full-stack Developer"
+        },
+        "category": {
+            "id": "projects",
+            "name": "Projects",
+            "slug": "projects"
+        },
+        "publishedAt": "2026-03-01T10:00:00Z",
+        "tags": [
+            "AWS",
+            "MySQL",
+            "Fullstack"
+        ],
+        "readingTime": 7
+    },
+    {
+        "id": "4",
+        "title": "Sử dụng ReactJS và Figma trong thiết kế UI/UX hiện đại",
+        "slug": "reactjs-figma-workflow",
+        "excerpt": "Quy trình từ thiết kế prototype trên Figma đến khi hiện thực hóa giao diện bằng ReactJS.",
+        "content": "# Từ bản vẽ đến dòng code\n\nViệc hiểu Figma giúp lập trình viên Frontend làm việc hiệu quả hơn. Bài viết này chia sẻ cách mình chuyển đổi các component từ Figma sang ReactJS một cách chính xác nhất bằng Tailwind CSS.",
+        "coverImage": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80",
+        "author": {
+            "id": "phi-long",
+            "name": "Nguyễn Xuân Phi Long",
+            "avatar": "https://scontent.fhan19-1.fna.fbcdn.net/v/t1.6435-9/146994739_261040135545019_2600529356075627518_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2a1932&_nc_ohc=As6uRjeEvP8Q7kNvwGMdOkF&_nc_oc=Adq7eUrTIpTlO5tq1SBFlIPSWrkcEBG4Ulve4Q46fwR-JUroy5rdmqeDYHbJr1cV1pg&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=4lOEaEITdwNIi9XbioFsUw&_nc_ss=7a30f&oh=00_Afwrprr5KaVjWFi-3AAbsi1ODgcvxPr617Gs58RRb2EelQ&oe=69EF65A5",
+            "bio": "Full-stack Developer"
+        },
+        "category": {
+            "id": "tech",
+            "name": "Development",
+            "slug": "development"
+        },
+        "publishedAt": "2026-03-10T14:00:00Z",
+        "tags": [
+            "ReactJS",
+            "Figma",
+            "UIUX"
+        ],
+        "readingTime": 5
+    },
+    {
+        "id": "5",
+        "title": "Trải nghiệm văn hóa và phong cách làm việc tại Nhật Bản",
+        "slug": "trai-nghiem-fpt-japan-academy",
+        "excerpt": "Những bài học quý giá từ chương trình đào tạo ngắn hạn tại FPT Japan Academy.",
+        "content": "# Nhật Bản: Không chỉ là công nghệ\n\nChuyến đi 3 tháng tại Nhật đã thay đổi hoàn toàn tư duy của mình về kỷ luật công việc và giao tiếp đa văn hóa. Đây là những kỹ năng mềm mà bất kỳ lập trình viên nào muốn Onboard tại Nhật cũng cần trang bị.",
+        "coverImage": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80",
+        "author": {
+            "id": "phi-long",
+            "name": "Nguyễn Xuân Phi Long",
+            "avatar": "https://scontent.fhan19-1.fna.fbcdn.net/v/t1.6435-9/146994739_261040135545019_2600529356075627518_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2a1932&_nc_ohc=As6uRjeEvP8Q7kNvwGMdOkF&_nc_oc=Adq7eUrTIpTlO5tq1SBFlIPSWrkcEBG4Ulve4Q46fwR-JUroy5rdmqeDYHbJr1cV1pg&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=4lOEaEITdwNIi9XbioFsUw&_nc_ss=7a30f&oh=00_Afwrprr5KaVjWFi-3AAbsi1ODgcvxPr617Gs58RRb2EelQ&oe=69EF65A5",
+            "bio": "Full-stack Developer"
+        },
+        "category": {
+            "id": "life",
+            "name": "Life & Culture",
+            "slug": "life-culture"
+        },
+        "publishedAt": "2026-03-25T16:00:00Z",
+        "tags": [
+            "Japan",
+            "Internship",
+            "Soft Skills"
         ],
         "readingTime": 5
     }
