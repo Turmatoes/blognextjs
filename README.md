@@ -1,6 +1,6 @@
-# Phi Long's Personal Blog & Portfolio
+# NextJS Blog Learning Platform
 
-Dự án Blog cá nhân và Portfolio của **Nguyễn Xuân Phi Long** - Full-stack Developer (định hướng BrSE). Được xây dựng trên nền tảng **Next.js 14 (App Router)** với thiết kế thân thiện, tối giản và tối ưu hóa hiệu suất (SEO, SSG/SSR).
+Dự án Blog cá nhân và Portfolio của **Nguyễn Xuân Phi Long** .Được xây dựng trên nền tảng **Next.js 14 (App Router)** với thiết kế thân thiện, tối giản và tối ưu hóa hiệu suất (SEO, SSG/SSR).
 
 ## 🚀 Công Nghệ (Tech Stack)
 
