@@ -32,8 +32,8 @@ export default function CommentForm({ postId }: CommentFormProps) {
         const newComment: Comment = {
             id: Math.random().toString(36).substring(7),
             postId,
-            author: data.name,
-            email: 'user@example.com', // Dữ liệu giả lập
+            author: data.author,
+            email: data.email,
             content: data.content,
             createdAt: new Date().toISOString(),
         };
@@ -53,21 +53,40 @@ export default function CommentForm({ postId }: CommentFormProps) {
                     <h3 className="text-xl font-bold mb-4 text-gray-800">Để lại bình luận</h3>
                 </div>
 
-                {/* Name Field */}
+                {/* Author Field */}
                 <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
                         Họ tên
                     </label>
                     <input
-                        {...register('name')}
+                        {...register('author')}
                         className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 outline-none transition-all ${
-                            errors.name ? 'border-red-500' : 'border-gray-300'
+                            errors.author ? 'border-red-500' : 'border-gray-300'
                         }`}
                         placeholder="Nguyễn Văn A"
                     />
-                    {errors.name && (
+                    {errors.author && (
                         <p className="text-red-500 text-xs mt-1 italic">
-                            {errors.name.message}
+                            {errors.author.message}
+                        </p>
+                    )}
+                </div>
+
+                {/* Email Field */}
+                <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Email
+                    </label>
+                    <input
+                        {...register('email')}
+                        className={`w-full px-4 py-2 border rounded-md focus:ring-2 focus:ring-blue-500 outline-none transition-all ${
+                            errors.email ? 'border-red-500' : 'border-gray-300'
+                        }`}
+                        placeholder="email@example.com"
+                    />
+                    {errors.email && (
+                        <p className="text-red-500 text-xs mt-1 italic">
+                            {errors.email.message}
                         </p>
                     )}
                 </div>

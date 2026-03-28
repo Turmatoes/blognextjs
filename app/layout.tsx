@@ -7,7 +7,7 @@ import Footer from '@/components/layout/Footer';
 const inter = Inter({ subsets: ['latin', 'vietnamese'] });
 
 export const metadata: Metadata = {
-  title: 'MyBlog - Chia sẻ kiến thức Next.js & React',
+  title: 'Phi Long - Chia sẻ kiến thức Next.js & React',
   description: 'Nền tảng chia sẻ những kiến thức mới nhất, chất lượng về lập trình, thiết kế, UI/UX.',
 };
 

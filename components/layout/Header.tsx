@@ -22,7 +22,7 @@ export default function Header() {
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
           <span className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400 tracking-tighter group-hover:opacity-80 transition-opacity">
-            MyBlog.
+            Phi Long
           </span>
         </Link>
         

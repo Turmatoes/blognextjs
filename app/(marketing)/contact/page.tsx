@@ -3,7 +3,7 @@ import ContactForm from '@/components/forms/ContactForm';
 import { Mail, MapPin, Phone } from 'lucide-react'; // Thêm icon cho sinh động
 
 export const metadata = {
-  title: 'Liên hệ | My Blog',
+  title: 'Liên hệ | Phi Long',
   description: 'Gửi tin nhắn cho chúng tôi để được giải đáp thắc mắc.',
 };
 

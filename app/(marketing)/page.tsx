@@ -1,49 +1,71 @@
-// app/(marketing)/page.tsx
-import { getPosts } from '@/lib/api';
-import PostList from '@/components/blog/PostList';
+import Image from 'next/image';
 import Link from 'next/link';
+import { getPosts } from '@/lib/api';
+import { format, parseISO } from 'date-fns';
 
 export default async function HomePage() {
-  // Lấy 6 bài viết mới nhất để hiển thị ở trang chủ
-  const posts = await getPosts();
-  const latestPosts = posts.slice(0, 6);
+  // Lấy 5 bài viết mới nhất
+  const posts = await getPosts({ limit: 5 });
 
   return (
-    <main>
-      {/* Hero Section */}
-      <section className="bg-gray-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-extrabold mb-6">
-            Chào mừng đến với My Blog
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Nơi chia sẻ kiến thức, kinh nghiệm về lập trình và công nghệ mới nhất.
-          </p>
-          <Link
-            href="/blog"
-            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold transition-colors"
-          >
-            Khám phá ngay
-          </Link>
-        </div>
+    <div className="container py-16 md:py-24 max-w-3xl mx-auto">
+      {/* Phần Bio Giới thiệu bản thân */}
+      <section className="mb-16 flex flex-col items-start">
+        <Image
+          src="https://picsum.photos/seed/philong/200/200" 
+          alt="Phi Long"
+          width={120}
+          height={120}
+          className="rounded-full mb-6 border-4 border-white shadow-md object-cover"
+        />
+        <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+          Phi Long
+        </h1>
+        <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-5">
+          Luôn lạc quan, luôn khao khát (với ẩm thực và tri thức). Cảm thấy đặc biệt thoải mái với những tác phẩm văn học lớn cũng như với các tài liệu kỹ thuật phức tạp. Yêu công nghệ, đam mê xây dựng hệ thống phần mềm và tôi tự nhận mình là người may mắn nhất thế giới.
+        </p>
+        <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+          Tôi sống mỗi ngày với nỗ lực cải thiện bản thân và tin tưởng mãnh liệt rằng mọi chuyện xảy ra đều là những điều tốt đẹp nhất có thể.
+        </p>
       </section>
 
-      {/* Latest Posts Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-end mb-10">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900">Bài viết mới nhất</h2>
-              <p className="text-gray-600 mt-2">Cập nhật những thông tin hữu ích mỗi ngày</p>
-            </div>
-            <Link href="/blog" className="text-blue-600 font-semibold hover:underline">
-              Xem tất cả →
+      {/* Phần Danh sách Blog */}
+      <section>
+        <h2 className="text-2xl font-bold text-gray-900 mb-8 pb-3 border-b flex items-center justify-between">
+          Blog
+        </h2>
+        
+        <ul className="space-y-8">
+          {posts.map((post) => (
+            <li key={post.id} className="group flex flex-col items-start">
+              <Link href={`/blog/${post.slug}`} className="block">
+                <h3 className="text-2xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors mb-2">
+                  {post.title}
+                </h3>
+              </Link>
+              <div className="flex items-center text-sm text-gray-500 mb-3 font-medium">
+                <time dateTime={post.publishedAt}>
+                  {format(parseISO(post.publishedAt), 'MMMM d, yyyy')}
+                </time>
+              </div>
+              <p className="text-gray-600 line-clamp-2 text-base leading-relaxed">
+                {post.excerpt}
+              </p>
+            </li>
+          ))}
+        </ul>
+
+        {posts.length > 0 && (
+          <div className="mt-12 pt-6 border-t">
+            <Link 
+              href="/blog"
+              className="inline-flex items-center font-bold text-primary-600 hover:text-primary-700 hover:underline transition-all text-lg"
+            >
+              Xem tất cả các bài viết của tôi →
             </Link>
           </div>
-
-          <PostList posts={latestPosts} />
-        </div>
+        )}
       </section>
-    </main>
+    </div>
   );
 }
