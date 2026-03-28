@@ -1,0 +1,44 @@
+/* app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-gray-50 text-gray-900 antialiased;
+    }
+
+    h1 {
+        @apply text-4xl font-bold mb-4;
+    }
+
+    h2 {
+        @apply text-3xl font-semibold mb-3;
+    }
+
+    h3 {
+        @apply text-2xl font-semibold mb-2;
+    }
+}
+
+@layer components {
+
+    /* Class dùng chung cho Layout */
+    .container {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+
+    /* Utility class cho Button */
+    .btn {
+        @apply px-4 py-2 rounded-md font-medium transition-all duration-200 inline-flex items-center justify-center;
+    }
+
+    .btn-primary {
+        @apply bg-primary-600 text-white hover:bg-primary-700 active:scale-95 shadow-sm;
+    }
+
+    /* Utility class cho Card */
+    .card {
+        @apply bg-white rounded-lg shadow-md p-6 border border-gray-100;
+    }
+}
