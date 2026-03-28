@@ -1,57 +1,54 @@
 // lib/api.ts
-import { Post } from '@/types';
+import { Post, Category } from '@/types';
+import postsData from '@/data/posts.json';
 
-export async function getPosts(): Promise<Post[]> {
-    try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-            next: { revalidate: 3600 }, // Cache trong 1 giờ (Incremental Static Regeneration)
-        });
+export async function getPosts(options?: {
+    limit?: number;
+    search?: string;
+    category?: string;
+}): Promise<Post[]> {
+    // Simulate API delay
+    await new Promise((resolve) => setTimeout(resolve, 500));
 
-        if (!response.ok) {
-            throw new Error('Không thể tải danh sách bài viết');
-        }
+    let posts = postsData as Post[];
 
-        const data = await response.json();
-
-        // Chuyển đổi dữ liệu từ API bên ngoài sang chuẩn interface Post của dự án
-        const posts: Post[] = data.slice(0, 10).map((item: any) => ({
-            id: item.id.toString(),
-            title: item.title,
-            // Tạo slug đơn giản từ tiêu đề
-            slug: item.title
-                .toLowerCase()
-                .trim()
-                .replace(/[^\w\s-]/g, '')
-                .replace(/[\s_-]+/g, '-')
-                .replace(/^-+|-+$/g, ''),
-            excerpt: item.body.substring(0, 100) + '...',
-            content: item.body,
-            // Sử dụng ảnh ngẫu nhiên từ Picsum để giao diện sinh động hơn
-            coverImage: `https://picsum.photos/seed/${item.id}/800/450`,
-            author: {
-                id: '1',
-                name: 'Admin',
-                avatar: '/images/avatar.jpg',
-                bio: 'Blog author',
-            },
-            category: {
-                id: '1',
-                name: 'Công nghệ',
-                slug: 'cong-nghe',
-            },
-            publishedAt: new Date().toISOString(),
-            tags: ['NextJS', 'React'],
-            readingTime: Math.ceil(item.body.split(' ').length / 200), // Tính toán thời gian đọc dựa trên số từ
-        }));
-
-        return posts;
-    } catch (error) {
-        console.error('Lỗi khi fetch posts:', error);
-        return [];
+    // Filter by search
+    if (options?.search) {
+        posts = posts.filter((post) =>
+            post.title.toLowerCase().includes(options.search!.toLowerCase())
+        );
     }
+
+    // Filter by category
+    if (options?.category) {
+        posts = posts.filter((post) => post.category.slug === options.category);
+    }
+
+    // Limit results
+    if (options?.limit) {
+        posts = posts.slice(0, options.limit);
+    }
+
+    return posts;
 }
 
 export async function getPostBySlug(slug: string): Promise<Post | null> {
-    const posts = await getPosts();
-    return posts.find((post) => post.slug === slug) || null;
+    await new Promise((resolve) => setTimeout(resolve, 300));
+    const post = (postsData as Post[]).find((p) => p.slug === slug);
+    return post || null;
+}
+
+export async function getAllPosts(): Promise<Post[]> {
+    return postsData as Post[];
+}
+
+export async function getCategories(): Promise<Category[]> {
+    const posts = postsData as Post[];
+    const categoryMap = new Map<string, Category>();
+
+    posts.forEach((post) => {
+        categoryMap.set(post.category.id, post.category);
+    });
+
+    return Array.from(categoryMap.values());
 }
