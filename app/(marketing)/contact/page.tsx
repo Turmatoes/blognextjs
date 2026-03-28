@@ -29,7 +29,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold">Email</p>
-                  <p className="text-gray-600">contact@myblog.com</p>
+                  <p className="text-gray-600">nguyenxuanphilong@gmail.com</p>
                 </div>
               </div>
 
@@ -39,7 +39,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold">Điện thoại</p>
-                  <p className="text-gray-600">+84 123 456 789</p>
+                  <p className="text-gray-600">+84 915 163 706</p>
                 </div>
               </div>
 

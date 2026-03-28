@@ -10,16 +10,16 @@ export default async function HomePage() {
   return (
     <div className="container py-16 md:py-24 max-w-3xl mx-auto">
       {/* Phần Bio Giới thiệu bản thân */}
-      <section className="mb-16 flex flex-col items-start">
+      <section className="mb-16 flex flex-col items-center text-center">
         <Image
           src="https://scontent.fhan19-1.fna.fbcdn.net/v/t1.6435-9/146994739_261040135545019_2600529356075627518_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=109&ccb=1-7&_nc_sid=2a1932&_nc_ohc=As6uRjeEvP8Q7kNvwGMdOkF&_nc_oc=Adq7eUrTIpTlO5tq1SBFlIPSWrkcEBG4Ulve4Q46fwR-JUroy5rdmqeDYHbJr1cV1pg&_nc_zt=23&_nc_ht=scontent.fhan19-1.fna&_nc_gid=4lOEaEITdwNIi9XbioFsUw&_nc_ss=7a30f&oh=00_Afwrprr5KaVjWFi-3AAbsi1ODgcvxPr617Gs58RRb2EelQ&oe=69EF65A5"
           alt="Phi Long"
-          width={120}
-          height={120}
-          className="rounded-full mb-6 border-4 border-white shadow-md object-cover"
+          width={160}
+          height={160}
+          className="w-40 h-40 rounded-full mb-6 border-4 border-white shadow-md object-cover"
         />
         <h1 className="text-3xl md:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
-          Phi Long
+          Nguyễn Xuân Phi Long
         </h1>
         <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-5">
           Chào mừng bạn đến với blog cá nhân của mình! Mình là Nguyễn Xuân Phi Long, một lập trình viên Full-stack trẻ đang sinh sống tại Hà Nội và vừa tốt nghiệp chuyên ngành Kỹ thuật Phần mềm tại Đại học FPT. Với nền tảng vững chắc về Java Spring Boot và ReactJS, mình đam mê xây dựng những hệ thống quản lý tối ưu và có khả năng mở rộng cao. Bên cạnh chuyên môn kỹ thuật, mình còn sở hữu chứng chỉ JLPT N2 và có kinh nghiệm thực tập tại Nhật Bản, giúp mình tự tin làm việc trong môi trường quốc tế.

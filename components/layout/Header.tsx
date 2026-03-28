@@ -21,7 +21,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-gray-100 bg-white/90 backdrop-blur-[10px] shadow-sm">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-primary-400 tracking-tighter group-hover:opacity-80 transition-opacity">
+          <span className="text-2xl font-extrabold text-gray-900 tracking-tighter group-hover:text-primary-600 transition-colors">
             Phi Long
           </span>
         </Link>
