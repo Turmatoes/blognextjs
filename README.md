@@ -1,15 +1,14 @@
 # NextJS Blog Learning Platform
 
 Dự án Blog cá nhân và Portfolio của **Nguyễn Xuân Phi Long** .Được xây dựng trên nền tảng **Next.js 14 (App Router)** với thiết kế thân thiện, tối giản và tối ưu hóa hiệu suất (SEO, SSG/SSR).
+Live Demo : https://nextjs-blog-rho-gold-11.vercel.app/
 
-## 🚀 Công Nghệ (Tech Stack)
+## Công Nghệ (Tech Stack)
 
 - **Core:** Next.js 14, React 18, TypeScript.
 - **UI/Styling:** Tailwind CSS, Lucide React.
-- **Form & Validation:** React Hook Form, Zod.
-- **Tiện ích:** date-fns.
 
-## 📁 Cấu Trúc Dự Án (Project Tree)
+## Cấu Trúc Dự Án (Project Tree)
 
 ```text
 blognextjs/
